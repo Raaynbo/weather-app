@@ -26,4 +26,8 @@ function homeDisplay(container){
     })
 }
 
-export {homeDisplay};
+function updateDisplay(data){
+    console.log(data)
+}
+
+export {homeDisplay, updateDisplay};

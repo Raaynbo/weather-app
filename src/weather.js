@@ -1,4 +1,5 @@
-console.log("weather.js")
+import {updateDisplay} from "./views/home.js";
+
 const api_key = "FTNYGBNTBT8XXCJK8QCEGW2AP";
 
 async function getWeather(city){
@@ -6,8 +7,7 @@ async function getWeather(city){
     const res = await fetch(url)
     if (res.status == 200){
         const data = await res.json();
-        console.log(data)
-        return data;
+        updateDisplay(data);
     }
 }
 
